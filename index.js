@@ -1,5 +1,6 @@
 'use strict'
 
+const debug = require('debug')('s3-set-headers')
 const S3Lister = require('s3-lister')
 const Batch = require('batch-then')
 const knox = require('knox')
@@ -77,7 +78,7 @@ Run.prototype._updateObject = function (key) {
             if (res.statusCode !== 200) {
               res.setEncoding('utf8')
               res.on('data', function (data) {
-                console.error(data)
+                debug(data)
               })
               reject(new Error('Error updating metadata: ' + res.statusCode))
               return
