@@ -12,7 +12,7 @@
     "s3-lister": "^0.1.0"
   },
   "devDependencies": {
-    "babel-istanbul": "0",
+    "babel-istanbul": "0.6.0",
     "mocha": "2",
     "standardberry": "*"
   },
